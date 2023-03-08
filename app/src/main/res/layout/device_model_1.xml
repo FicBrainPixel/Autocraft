@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Space
+        android:id="@+id/space_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"/>
+
+    <Space
+        android:id="@+id/space_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.14"
+        app:layout_constraintHeight_percent="0.2"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:maxLines="1"
+        android:inputType="text"
+        android:ellipsize="end"
+        android:fontFamily="@font/font"
+        android:elevation="20dp"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/space_1"
+        app:layout_constraintStart_toEndOf="@id/space_2" />
+
+    <Space
+        android:id="@+id/space_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.14"
+        app:layout_constraintHeight_percent="0.3"/>
+
+    <ImageView
+        android:id="@+id/signal_box"
+        android:elevation="20dp"
+        android:src="@drawable/signal_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/space_1"
+        app:layout_constraintEnd_toStartOf="@id/space_3"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintDimensionRatio="H,1:1"/>
+
+    <ImageView
+        android:id="@+id/signal_send"
+        android:elevation="20dp"
+        android:src="@drawable/signal_send"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/signal_box"
+        app:layout_constraintStart_toStartOf="@id/signal_box"
+        app:layout_constraintEnd_toEndOf="@id/signal_box"
+        app:layout_constraintBottom_toBottomOf="@id/signal_box"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintDimensionRatio="H,1:1"/>
+
+    <Space
+        android:id="@+id/space_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.21"/>
+
+    <ImageView
+        android:id="@+id/inner"
+        android:elevation="20dp"
+        android:src="@drawable/device_card_inner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:alpha="0.9"
+        app:layout_constraintStart_toStartOf="@id/outer"
+        app:layout_constraintTop_toBottomOf="@id/space_4"
+        app:layout_constraintEnd_toEndOf="@id/outer"
+        app:layout_constraintBottom_toBottomOf="@id/outer"
+        app:layout_constraintWidth_percent="0.86"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="25dp"
+        app:cardMaxElevation="12dp"
+        app:cardBackgroundColor="@color/transparent"
+        android:alpha="0.9"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:src="@drawable/device_card_outer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="20dp"
+        app:layout_constraintStart_toStartOf="@id/inner"
+        app:layout_constraintTop_toTopOf="@id/inner"
+        app:layout_constraintEnd_toEndOf="@id/inner"
+        app:layout_constraintBottom_toBottomOf="@id/inner">
+
+        <Space
+            android:id="@+id/space_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0"
+            app:layout_constraintHeight_percent="0.09"/>
+
+        <Space
+            android:id="@+id/space_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.24"
+            app:layout_constraintHeight_percent="0"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fanOneSpeedUpCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@id/space_6"
+            app:layout_constraintTop_toBottomOf="@id/space_5"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:id="@+id/fanOneSpeedUp"
+                android:src="@drawable/f_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fanOneCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintTop_toBottomOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintEnd_toEndOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/fanOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="F1"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fanOneSpeedDownCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintTop_toBottomOf="@id/fanOneCard"
+            app:layout_constraintEnd_toEndOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:id="@+id/fanOneSpeedDown"
+                android:src="@drawable/f_down"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/socketOneIconCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintTop_toBottomOf="@id/fanOneSpeedDownCard"
+            app:layout_constraintEnd_toEndOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/s"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/socketOneCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/lightOneCard"
+            app:layout_constraintTop_toTopOf="@id/socketOneIconCard"
+            app:layout_constraintEnd_toEndOf="@id/lightOneCard"
+            app:layout_constraintBottom_toBottomOf="@id/socketOneIconCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/socketOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="S1"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lightOneCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toEndOf="@id/fanOneCard"
+            app:layout_constraintTop_toTopOf="@id/fanOneCard"
+            app:layout_constraintBottom_toBottomOf="@id/fanOneCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/lightOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="L1"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lightTwoCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toEndOf="@id/lightOneCard"
+            app:layout_constraintTop_toTopOf="@id/fanOneCard"
+            app:layout_constraintBottom_toBottomOf="@id/fanOneCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/lightTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="L2"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lightThreeCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toEndOf="@id/lightTwoCard"
+            app:layout_constraintTop_toTopOf="@id/fanOneCard"
+            app:layout_constraintBottom_toBottomOf="@id/fanOneCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/lightThree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="L3"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lightFourCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toEndOf="@id/lightThreeCard"
+            app:layout_constraintTop_toTopOf="@id/fanOneCard"
+            app:layout_constraintBottom_toBottomOf="@id/fanOneCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/lightFour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="L4"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fanTwoSpeedUpCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@id/lightFourCard"
+            app:layout_constraintTop_toTopOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintBottom_toBottomOf="@id/fanOneSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:id="@+id/fanTwoSpeedUp"
+                android:src="@drawable/f_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fanTwoCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintTop_toBottomOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintEnd_toEndOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/fanTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="F2"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fanTwoSpeedDownCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintTop_toBottomOf="@id/fanTwoCard"
+            app:layout_constraintEnd_toEndOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:id="@+id/fanTwoSpeedDown"
+                android:src="@drawable/f_down"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/socketTwoIconCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintTop_toBottomOf="@id/fanTwoSpeedDownCard"
+            app:layout_constraintEnd_toEndOf="@id/fanTwoSpeedUpCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/s"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/socketTwoCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/lightFourCard"
+            app:layout_constraintTop_toTopOf="@id/socketTwoIconCard"
+            app:layout_constraintEnd_toEndOf="@id/lightFourCard"
+            app:layout_constraintBottom_toBottomOf="@id/socketTwoIconCard"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintWidth_percent="0.07">
+
+            <ImageView
+                android:src="@drawable/button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/socketTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="S2"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:textColor="@color/text_grey"/>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

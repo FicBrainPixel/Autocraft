@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "648995075966",
+    "firebase_url": "https://autocraft-robolabs-default-rtdb.firebaseio.com",
+    "project_id": "autocraft-robolabs",
+    "storage_bucket": "autocraft-robolabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648995075966:android:a02bc7e25c5a9ef4a2a52f",
+        "android_client_info": {
+          "package_name": "com.fbp.autocraft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648995075966-b6drjkqp37kbt1ciioknht39r5ha3pbu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fbp.autocraft",
+            "certificate_hash": "198d5edc74e8e5c56670f4fc095b09c30260c05e"
+          }
+        },
+        {
+          "client_id": "648995075966-ml41jl1dc3pg635b40bpoae3eijhnq1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsovAPsI_c3sJbKbA09TJNlgVV4qRu-GY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648995075966-ml41jl1dc3pg635b40bpoae3eijhnq1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
