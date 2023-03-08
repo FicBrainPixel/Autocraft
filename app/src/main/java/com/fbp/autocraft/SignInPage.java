@@ -66,6 +66,8 @@ public class SignInPage extends AppCompatActivity
 
         signIn.setOnClickListener(v ->
         {
+            startActivity(new Intent(this, MainPage.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            /*
             try
             {
                 if(connectivityManager.getActiveNetworkInfo() != null && Runtime.getRuntime().exec("ping -c 1 google.com").waitFor() == 0)
@@ -77,6 +79,7 @@ public class SignInPage extends AppCompatActivity
                     Snackbar.make(findViewById(android.R.id.content), "Please turn on your internet connection", Snackbar.LENGTH_LONG).show();
                 }
             } catch (Exception ignored) {}
+             */
         });
 
         activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result ->

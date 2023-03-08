@@ -144,10 +144,10 @@ public class DeviceController extends AppCompatActivity
                 if (ShortcutManagerCompat.isRequestPinShortcutSupported(getApplicationContext()))
                 {
                     ShortcutInfoCompat shortcutInfo = new ShortcutInfoCompat.Builder(getApplicationContext(), deviceModelData.macAddress)
-                            .setIntent(new Intent(getApplicationContext(), DeviceController.class).putExtra("MAC", deviceModelData.macAddress).putExtra("Device Name", deviceModelData.deviceName).setAction(Intent.ACTION_MAIN))
-                            .setShortLabel(deviceModelData.customName)
-                            .setIcon(IconCompat.createWithResource(getApplicationContext(), R.mipmap.logo))
-                            .build();
+                        .setIntent(new Intent(getApplicationContext(), DeviceController.class).putExtra("MAC", deviceModelData.macAddress).putExtra("Device Name", deviceModelData.deviceName).setAction(Intent.ACTION_MAIN))
+                        .setShortLabel(deviceModelData.customName)
+                        .setIcon(IconCompat.createWithResource(getApplicationContext(), R.mipmap.logo))
+                        .build();
                     ShortcutManagerCompat.requestPinShortcut(getApplicationContext(), shortcutInfo, null);
                 }
                 else
